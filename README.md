@@ -1,6 +1,7 @@
 # ReplicaConnect
 
-TODO: Write a gem description
+This gem will allow you to easily create a connection to a database in
+order to run scripts from any ruby file.
 
 ## Installation
 
@@ -18,7 +19,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To use the gem, include it in your ruby file as follows:
+
+`require 'replica_connect'`
+
+Then, create a connection with
+
+`c = ReplicaConnect::Connection.new().connect`
+
+And run SQL queries with
+
+`c.execute('SELECT * FROM users LIMIT 1')`
+
+The first time you run a script with replica_connect, it will prompt you
+for database connection information.
+
+replica_connect then creates a `rc_config.yml` file in the directory of your
+script that contains the database connection information, so after you
+input it once, you can change your script and run it multiple times
+without re-inputting the connection data.
+
+If you are checking your script into source control, make sure to add
+the `rc_config.yml` file to your `.gitignore`
 
 ## Contributing
 
