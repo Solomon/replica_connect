@@ -21,15 +21,15 @@ Or install it yourself as:
 
 To use the gem, include it in your ruby file as follows:
 
-`require 'replica_connect'`
+    require 'replica_connect'
 
 Then, create a connection with
 
-`connection = ReplicaConnect::Connection.new().connect`
+    connection = ReplicaConnect::Connection.new().connect
 
 And run SQL queries with
 
-`connection.execute('SELECT * FROM users LIMIT 1')`
+    connection.execute('SELECT * FROM users LIMIT 1')
 
 The first time you run a script with replica_connect, it will prompt you
 for database connection information.

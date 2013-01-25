@@ -27,10 +27,10 @@ module ReplicaConnect
 
     def connect
       ActiveRecord::Base.establish_connection(
-        :adapter => @adapter, 
-        :host => @host, 
-        :database => @db_name, 
-        :username => @username, 
+        :adapter => @adapter,
+        :host => @host,
+        :database => @db_name,
+        :username => @username,
         :password => @password).connection
     end
 
