@@ -14,7 +14,7 @@ module ReplicaConnect
         @host = configs['host']
         @adapter = configs['adapter']
       else
-        f = File.new('rc_config.yml')
+        f = File.new('rc_config.yml', 'w+')
         f.puts "rc:"
         @username =  get_from_user('username',f)
         @password =  get_from_user('password',f)
@@ -43,7 +43,7 @@ module ReplicaConnect
     def get_from_user(param, file)
       puts "Please enter your #{param}"
       p = gets.chomp
-      f.puts "  #{param}: #{p}"
+      file.puts "  #{param}: #{p}"
       p
     end
   end

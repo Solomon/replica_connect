@@ -8,12 +8,13 @@ Gem::Specification.new do |gem|
   gem.version       = ReplicaConnect::VERSION
   gem.authors       = ["Solomon"]
   gem.email         = ["solomon.kahn@gmail.com"]
-  gem.description   = "Connect to the pp replica"
-  gem.summary       = "connect to the pp replica"
+  gem.description   = "Connect to a database easily from a ruby file"
+  gem.summary       = "Easily connect to a database in ruby scripts"
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
+  gem.add_dependency('activerecord')
 end

@@ -46,6 +46,9 @@ To delete the rc_config file, call:
 
 `ReplicaConnect::Connection.new().clear_config`
 
+If you are having problems, make sure you have the right adapter gem
+installed for your database. As an example, for postgres, you need to
+have the `pg` gem installed to connect to the database.
 
 ## Contributing
 
