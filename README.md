@@ -25,11 +25,11 @@ To use the gem, include it in your ruby file as follows:
 
 Then, create a connection with
 
-`c = ReplicaConnect::Connection.new().connect`
+`connection = ReplicaConnect::Connection.new().connect`
 
 And run SQL queries with
 
-`c.execute('SELECT * FROM users LIMIT 1')`
+`connection.execute('SELECT * FROM users LIMIT 1')`
 
 The first time you run a script with replica_connect, it will prompt you
 for database connection information.
@@ -41,6 +41,11 @@ without re-inputting the connection data.
 
 If you are checking your script into source control, make sure to add
 the `rc_config.yml` file to your `.gitignore`
+
+To delete the rc_config file, call:
+
+`ReplicaConnect::Connection.new().clear_config`
+
 
 ## Contributing
 

@@ -34,10 +34,8 @@ module ReplicaConnect
         :password => @password).connection
     end
 
-    def clear_env
-      ['rc_username', 'rc_password', 'rc_db', 'rc_host', 'rc_adapter'].each do |ev|
-        %x("unset {ev}")
-      end
+    def clear_config
+      File.delete('rc_config.yml') unless !File.exists?('rc_config.yml')
     end
 
     private
