@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["solomon.kahn@gmail.com"]
   gem.description   = "Connect to a database easily from a ruby file"
   gem.summary       = "Easily connect to a database in ruby scripts"
-  gem.homepage      = ""
+  gem.homepage      = "http://www.github.com/paperlesspost/replica_connect"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
