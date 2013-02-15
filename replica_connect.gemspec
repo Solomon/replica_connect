@@ -6,7 +6,7 @@ require 'replica_connect/version'
 Gem::Specification.new do |gem|
   gem.name          = "replica_connect"
   gem.version       = ReplicaConnect::VERSION
-  gem.authors       = ["Solomon"]
+  gem.authors       = ["Solomon Kahn", "Richard Boyle"]
   gem.email         = ["solomon.kahn@gmail.com"]
   gem.description   = "Connect to a database easily from a ruby file"
   gem.summary       = "Easily connect to a database in ruby scripts"
